@@ -5,5 +5,5 @@ for i in range(10):
       print(i,end= '')
       print(j)
       continue
-    print(i, end='')
-    print(j, end = ', ')
+    print("{}".format(i), end='')
+    print("{}".format(j), end = ', ')
