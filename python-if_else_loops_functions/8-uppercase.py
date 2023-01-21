@@ -7,4 +7,3 @@ def uppercase(str):
         new_string += c
     print (new_string,end = ' ')
     print('\n')
-
