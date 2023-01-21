@@ -1,0 +1,3 @@
+<<<<<<< HEAD
+PYTHON FIRSTS STEPS
+>>>>>>> 85bfc86d5c8b40c8847a70abcbc359bd81b2f83d
