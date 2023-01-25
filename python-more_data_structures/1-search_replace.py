@@ -2,7 +2,7 @@
 def search_replace(my_list, search, replace):
     new_list = []
     if type(my_list) != list or not my_list:
-        return None
+        return my_list
     for element in my_list:
         if element != search:
             new_list.append(element)
