@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
     if not isinstance(roman_string, str):
         return 0
     for let in roman_string:
-        if let == 'I' and i < len(roman_string) - 1 and roman_string[i + 1] != 'I':
+        if let == 'I' and i < len(roman_string) -1 and roman_string[i + 1] in "XVLCM":
             roman_num -= 1
         if let == 'I':
             roman_num += 1
