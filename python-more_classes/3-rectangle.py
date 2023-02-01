@@ -49,5 +49,8 @@ class Rectangle:
         for i in range (self.__height):
             for j in range(self.__width):
                 rectangle.append('#')
-            rectangle.append("\n")
-        return "".join(rectangle)
+            if i == self.height -1:
+                return "".join(rectangle)
+            else:
+                rectangle.append("\n")
+        
