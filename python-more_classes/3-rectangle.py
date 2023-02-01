@@ -46,8 +46,8 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
         rectangle = []
-        for i in range (self.__width):
-            for j in range(self.__height):
+        for i in range (self.__height):
+            for j in range(self.__width):
                 rectangle.append('#')
             rectangle.append("\n")
         return "".join(rectangle)
