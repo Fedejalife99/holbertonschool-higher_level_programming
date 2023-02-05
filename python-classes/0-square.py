@@ -4,6 +4,9 @@
 class Square:
     """empty Square class"""
 
-def __init__(self) -> None:
+
+    def __init__(self) -> None:
+        """initialice the square"""
+
         pass
         
