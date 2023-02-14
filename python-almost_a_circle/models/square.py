@@ -18,7 +18,7 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
         self.height = value
-    
+
     def __str__(self):
         """return a representation of the square"""
         return(f"[Square] ({id} {self.x}/{self.y} {self.height}")
