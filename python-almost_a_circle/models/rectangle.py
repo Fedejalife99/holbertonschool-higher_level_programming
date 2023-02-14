@@ -83,12 +83,12 @@ class Rectangle(Base):
         if len(args) is not 0:
             for i in range(1, len(args)):
                 if i == 1:
-                    self.__id = args[1]
+                    self.id = args[1]
                 if i == 2:
-                    self.__width = args[2]
+                    self.width = args[2]
                 if i == 3:
-                    self.__height = args[3]
+                    self.height = args[3]
                 if i  == 4:
-                    self.__x = args[4]
+                    self.x = args[4]
                 if i == 5:
-                    self.__y = args[5]
+                    self.y = args[5]
