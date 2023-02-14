@@ -80,7 +80,7 @@ class Rectangle(Base):
     
     def update(self, *args):
         """update the Rectangle"""
-        i = 1
+        i = 0
         if len(args) is not 0:
             for argument in args:
                 if i == 1:
