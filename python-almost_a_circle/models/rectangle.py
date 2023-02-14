@@ -93,3 +93,4 @@ class Rectangle(Base):
                     self.x = argument
                 if i == 5:
                     self.y = argument
+                i += 1
