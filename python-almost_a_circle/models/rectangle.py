@@ -80,15 +80,16 @@ class Rectangle(Base):
     
     def update(self, *args):
         """update the Rectangle"""
+        i = 1
         if len(args) is not 0:
-            for i in range(1, len(args)):
+            for argument in args:
                 if i == 1:
-                    self.id = args[1]
+                    self.id = argument
                 if i == 2:
-                    self.width = args[2]
+                    self.width = argument
                 if i == 3:
-                    self.height = args[3]
+                    self.height = argument
                 if i  == 4:
-                    self.x = args[4]
+                    self.x = argument
                 if i == 5:
-                    self.y = args[5]
+                    self.y = argument
