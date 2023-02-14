@@ -70,15 +70,18 @@ class Rectangle(Base):
 
     def display(self):
         """display the rectangle printing #"""
-        for j in range(self.__height):
-            for i in range(self.__width):
-                print("#", end='')
-            print()
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update the Rectangle"""
         i = 1
         if len(args) != 0:
@@ -94,3 +97,18 @@ class Rectangle(Base):
                 if i == 5:
                     self.__y = argument
                 i += 1
+        elif len(kwargs) != 0:
+            for key in kwargs:
+                for value in key:
+                    if key == 'id':
+                        self.id = value
+                    if key == 'width':
+                        self.__width = value
+                    if key == 'height':
+                        self.__height = value
+                    if key == 'x':
+                        self.__x = value
+                    if key == 'y':
+                        self.__y = value
+        else:
+            pass
