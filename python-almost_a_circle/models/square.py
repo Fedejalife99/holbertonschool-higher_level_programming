@@ -38,7 +38,7 @@ class Square(Rectangle):
                     self.__x = argument
                 if i == 5:
                     self.__y = argument
-                i += 1          
+                i += 1
         elif kwargs and len(kwargs) != 0:
             for key in kwargs:
                 for value in key:
@@ -53,8 +53,8 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """return a dictionary representation of the square"""
-        new_dict = {'id': self.id, 
-                    'size': self.size, 
-                    'x': self.x, 
+        new_dict = {'id': self.id,
+                    'size': self.size,
+                    'x': self.x,
                     'y': self.y}
         return new_dict
