@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """define a class to be the base from all the excersises"""
+import json
 
 
 class Base:
@@ -13,3 +14,10 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """return that returns the JSON string representation"""
+        if list_dictionaries == None:
+            return "[]"
+        else:
+            return __dict__(list_dictionaries)
