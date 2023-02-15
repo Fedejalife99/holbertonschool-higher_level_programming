@@ -20,4 +20,4 @@ class Base:
         if list_dictionaries == None:
             return "[]"
         else:
-            return __dict__(list_dictionaries)
+            return json.dumps(list_dictionaries)
