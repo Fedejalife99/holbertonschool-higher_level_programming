@@ -31,24 +31,22 @@ class Square(Rectangle):
                 if i == 1:
                     self.id = argument
                 if i == 2:
-                    self.__width = argument
+                    self.size = argument
                 if i == 3:
-                    self.__height = argument
+                    self.x = argument
                 if i == 4:
-                    self.__x = argument
-                if i == 5:
-                    self.__y = argument
+                    self.y = argument
                 i += 1
-        elif len(kwargs) != 0:
+        elif kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():
                     if key == 'id':
                         self.id = value
                     if key == 'size':
                         self.size = value
                     if key == 'x':
-                        self.__x = value
+                        self.x = value
                     if key == 'y':
-                        self.__y = value
+                        self.y = value
 
     def to_dictionary(self):
         """return a dictionary representation of the square"""
