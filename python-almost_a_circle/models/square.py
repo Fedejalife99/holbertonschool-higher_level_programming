@@ -39,7 +39,7 @@ class Square(Rectangle):
                 if i == 5:
                     self.__y = argument
                 i += 1
-        elif args == None and kwargs and len(kwargs) != 0:
+        elif len(kwargs) != 0:
             for key, value in kwargs.items():
                     if key == 'id':
                         self.id = value
