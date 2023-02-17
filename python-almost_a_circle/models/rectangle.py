@@ -113,10 +113,10 @@ class Rectangle(Base):
                         self.__y = value
         else:
             pass
-       
+
     def to_dictionary(self):
         """return a dictionary representation of the square"""
-        new_dict = {'id': self.id, 
+        new_dict = {'id': self.id,
                     'width': self.width,
                     'height': self.height,
                     'x': self.x,
