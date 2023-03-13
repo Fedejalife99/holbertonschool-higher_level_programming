@@ -33,5 +33,12 @@ class Base:
                 jsonfile.write("[]")
             else:
                 for list in list_objs:
-                    new_list = cls.to_json_string(list)
+                    new_list.append(cls.to_json_string(list))
                     filename.write(new_list)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation"""
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)
