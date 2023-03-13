@@ -1,2 +1,2 @@
 -- Remove database if it exist
-remove database IF EXIST 'hbtn_0c_0'
+remove database IF EXISTS 'hbtn_0c_0'
