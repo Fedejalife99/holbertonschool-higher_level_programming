@@ -1,10 +1,11 @@
 #!/usr/bin/node
 
-if (process.argv.length > 1) {
-    for (let i = 2; i < process.argv.length; i++) {
+for (let i = 1; process.argv[i]; i++) {
+    if (process.argv[i]) {
         console.log('Argument found');
     }
 }
-else {
-    console.log('No argument');
+
+if (!process.argv) {
+    console.log('No argument')
 }
