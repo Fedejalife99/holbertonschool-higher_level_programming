@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const size = process.argv[2];
-const simbol = 'x';
+const simbol = 'X';
 if (isNaN(size) === true) {
     console.log('Missing size');
 }
