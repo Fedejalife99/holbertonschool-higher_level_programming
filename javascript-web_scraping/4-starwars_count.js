@@ -1,10 +1,16 @@
 #!/usr/bin/node
 
 const request = require('request');
-const id = process.argv[2];
-request('https://swapi-api.hbtn.io/api/films/', function (err, response, body) {
+const api = process.argv[2];
+let cnt = 0;
+request(api, function (err, response, body) {
   if (err) throw err;
-  const movies = JSON.parse(body);
-  const characters = movies.characters;
-  console.log(characters);
+  const data = JSON.parse(body);
+  const movies = data.results;
+  for (const film of movies) {
+    if (film.characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
+      cnt += 1;
+    }
+  }
+  console.log(cnt);
 });
