@@ -6,22 +6,33 @@ const ids = [];
 const completedTasks = {};
 
 request(url, (err, response, body) => {
-    if (err) throw err;
-    const res = JSON.parse(body);
-    // obtener ids únicos
+  if (err) throw err;
+  const res = JSON.parse(body);
+  // obtener ids únicos
+  for (const element of res) {
+    if (!ids.includes(element.userId)) {
+      ids.push(element.userId);
+    }
+  }
+  for (const id of ids) {
+    cnt = 0;
     for (const element of res) {
-        if (!ids.includes(element.userId)) {
-            ids.push(element.userId);
-        }
+      if (element.userId === id && element.completed === true) {
+        cnt++;
+      }
     }
-    for (const id of ids) {
-        cnt = 0;
-        for (const element of res) {
-            if (element.userId === id && element.completed === true) {
-                cnt++;
-            }
-        }
-        completedTasks[id] = cnt;
+    completedTasks[id] = cnt;
+  }
+  let allZeros = true;
+  for (const value of Object.values(completedTasks)) {
+    if (value !== 0) {
+      allZeros = false;
+      break;
     }
+  }
+  if (allZeros) {
+    console.log({});
+  } else {
     console.log(completedTasks);
+  }
 });

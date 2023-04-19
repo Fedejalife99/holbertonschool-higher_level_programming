@@ -5,9 +5,8 @@ const url = process.argv[2];
 const fs = require('fs');
 
 request(url, 'utf8', (err, response, body) => {
+  if (err) throw err;
+  fs.writeFile(pathOfFile, response.body, (err) => {
     if (err) throw err;
-    console.log(response.body);
-    fs.appendFile(pathOfFile, response.body, (err) => {
-        if (err) throw err;
-    });
+  });
 });
