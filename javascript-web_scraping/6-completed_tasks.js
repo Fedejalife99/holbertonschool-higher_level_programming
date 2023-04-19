@@ -1,8 +1,9 @@
+#!/usr/bin/node
 const request = require('request');
 const url = process.argv[2];
 let cnt = 0;
 const ids = [];
-const completed_tasks = {};
+const completedTasks = {};
 
 request(url, (err, response, body) => {
     if (err) throw err;
@@ -20,7 +21,7 @@ request(url, (err, response, body) => {
                 cnt++;
             }
         }
-        completed_tasks[id] = cnt;
+        completedTasks[id] = cnt;
     }
-    console.log(completed_tasks);
+    console.log(completedTasks);
 });
